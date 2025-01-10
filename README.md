@@ -152,5 +152,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 📧 Contact
 For questions or collaborations, please contact:
-- **Name**: Fahim Ahamed
+- **LinkedIn**: [Fahim Ahamed](https://www.linkedin.com/in/f-a-tonmoy/)
 - **Email**: f.a.tonmoy00@gmail.com
