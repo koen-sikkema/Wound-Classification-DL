@@ -11,7 +11,7 @@ This project aims to address these challenges by leveraging deep learning techni
 ## 📂 Dataset
 The project uses publicly available wound image datasets and custom-curated data for classification. The primary dataset used in this project can be accessed at: [Wound Classification Dataset](https://www.kaggle.com/datasets/ibrahimfateen/wound-classification)
 
-The dataset contains wound images categorized into ten distinct classes. Below is an overview of the dataset distribution:
+The dataset contains a total of 2940 wound images categorized into 10 distinct classes. Below is an overview of the dataset distribution:
 
 #### 🧮 Class Distribution
 The dataset includes the following categories with their respective sample counts:
@@ -40,7 +40,6 @@ The dataset includes the following categories with their respective sample count
 #### 🛠️ Preprocessing Strategies
 To handle the above challenges, the following preprocessing techniques were used:
 - **Image Resizing**: All images were resized to a uniform resolution to ensure consistency in input dimensions for the model.
-- **Aspect Ratio Standardization**: Images were padded or cropped to maintain aspect ratios wherever possible.
 - **Data Augmentation**:
   - Techniques like rotation, flipping, and shifting adjustments were applied to increase the diversity of training data, especially for underrepresented classes.
 
