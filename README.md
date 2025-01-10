@@ -1,12 +1,33 @@
 # Wound Classification Using Deep Learning
 
-## 🔍 Overview
-This project focuses on classifying different types of wounds using deep learning techniques. It aims to aid medical diagnostics by providing automated wound classification based on image data. The project leverages state-of-the-art deep learning models and image-processing techniques to achieve high accuracy and efficiency.
-
-## 🎯 Project Motivation
+## 🎯 Overview & Motivation
 Wound classification is a critical component of medical diagnostics, aiding healthcare professionals in identifying and treating wounds effectively. Manual wound assessment can be time-consuming, subjective, and prone to human error, especially in resource-constrained environments. 
 
 This project aims to address these challenges by leveraging deep learning techniques to automate wound classification, ensuring accuracy, consistency, and scalability. By building a robust and efficient classification system, this project seeks to assist medical practitioners in providing timely and precise care, ultimately improving patient outcomes and supporting the adoption of AI-driven healthcare solutions.
+
+## 📂 Project Structure
+```
+.
+├── data/                        # Dataset files
+│   ├── original                 # Unprocessed data
+│   ├── processed                # Standerdized data (image resolution and aspect ratio)
+│   ├── balanced                 # Every class has an equal number of samples
+│   ├── train                    # Train dataset
+│   ├── val                      # Validation dataset
+│   ├── test                     # Test dataset
+├── src/                         # Source code
+│   ├── exploration.ipynb        # Dataset exploration
+│   ├── data_processing.ipynb    # Data preprocessing script
+│   ├── custom_cnn.ipynb         # Training script
+├── models/                      # Saved Deep learning models
+│   └── best_cnn_old.h5          # Initial CNN model
+│   └── best_cnn.h5              # Improved CNN model
+├── tests/                       # Test scripts
+│   └── test_model.ipynb         # Test model on new data
+├── requirements.txt             # Python dependencies
+├── README.md                    # Project documentation
+└── LICENSE                      # License file
+```
 
 ## 📂 Dataset
 The project uses publicly available wound image datasets and custom-curated data for classification. The primary dataset used in this project can be accessed at: [Wound Classification Dataset](https://www.kaggle.com/datasets/ibrahimfateen/wound-classification)
@@ -52,8 +73,10 @@ The model is a custom Convolutional Neural Network (CNN) designed for wound clas
   - **EarlyStopping**: Stops training early if the performance stops improving.
   - **ReduceLROnPlateau**: Reduces the learning rate when a metric has stopped improving.
 
-## 🚀 Results
-The initial model demonstrated moderate performance, achieving a validation accuracy of **89.80%** and a validation loss of **0.4103**. After enhancements to the architecture and training process, the improved model significantly outperformed the initial one, achieving a validation accuracy of **98.50%** and a reduced validation loss of **0.1061**. This improvement highlights the effectiveness of the modifications in boosting the model's accuracy and generalization capabilities.
+## 🚀 Results  
+The initial model demonstrated moderate performance, achieving a validation accuracy of **89.80%** and a validation loss of **0.4103**. After enhancements to the architecture and training process, the improved model significantly outperformed the initial one, achieving a validation accuracy of **98.50%** and a reduced validation loss of **0.1061**. 
+
+To further validate the model's robustness, random wound images were downloaded from Google, and the model accurately predicted their respective categories. This demonstrates the model's strong generalization capabilities and its potential for real-world applications.
 
 ## 🛠️ Technologies Used
 - **Programming Language**: Python
@@ -115,30 +138,6 @@ The initial model demonstrated moderate performance, achieving a validation accu
    - After evaluation, test the model performance using the `test_model.ipynb` notebook.
 
 These instructions should help you get the project up and running. Let me know if further clarifications are needed!
-
-## 📂 Project Structure
-```
-.
-├── data/                        # Dataset files
-│   ├── original                 # Unprocessed data
-│   ├── processed                # Standerdized data (image resolution and aspect ratio)
-│   ├── balanced                 # Every class has an equal number of samples
-│   ├── train                    # Train dataset
-│   ├── val                      # Validation dataset
-│   ├── test                     # Test dataset
-├── src/                         # Source code
-│   ├── exploration.ipynb        # Dataset exploration
-│   ├── data_processing.ipynb    # Data preprocessing script
-│   ├── custom_cnn.ipynb         # Training script
-├── models/                      # Saved Deep learning models
-│   └── best_cnn_old.h5          # Initial CNN model
-│   └── best_cnn.h5              # Improved CNN model
-├── tests/                       # Test scripts
-│   └── test_model.ipynb         # Test model on new data
-├── requirements.txt             # Python dependencies
-├── README.md                    # Project documentation
-└── LICENSE                      # License file
-```
 
 ## 🤝 Contributions
 Contributions are welcome! To contribute:
